@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>tessellation studies</title>
+  <script src="./lib/svg.min.js"></script>
+  <script src="./lib/svg.filter.min.js"></script>
+  <script src="./lib/color-scheme.min.js"></script>
+  <style>
+  html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  }
+  #svg {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    z-index: -1;
+    position:absolute;
+  }
+  #nav {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+  }
+  a {
+    text-align: center;
+    margin: 0.3rem;
+    padding: 0.4rem;
+    background-color: rgba(255,255,255,0.8);
+    border: 2px solid black;
+    text-decoration: none;
+    color: black;
+  }
+  a.active {
+    background-color: rgba(255,255,255,0.9);
+    color: green;
+  }
+  a:hover{
+    background-color: rgba(255,255,255,1);
+    color: red;
+    filter: drop-shadow(-2px 5px 10px black);
+  }
+  </style>
+</head>
+<body>
+  <div id="svg"></div>
+  <div id="nav">
+    <a href="javascript:;" class="tl active" id="tess1">[1]</a>
+    <a href="javascript:;" class="tl" id="tess2">[2]</a>
+    <a href="javascript:;" class="tl" id="tess3">[3]</a>
+    <a href="javascript:;" class="tl" id="tess4">[4]</a>
+    <a href="https://dputnam.net">←</a>
+  </div>
+  <script src="./js/tess1.js"></script>
+  <script src="./js/tess2.js"></script>
+  <script src="./js/tess3.js"></script>
+  <script src="./js/tess4.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
